@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export const App = () => {
+  const [todoText, setTodoText] = useState("");
   const [incompleteTodos, setIncompleteTodos] = useState(["abc", "def"]);
   const [completeTodos, setCompleteTodo] = useState(["ghi"]);
+
+  const onChengeTodoText = (event) => setTodoText(event.target.value);
+
   return (
     <>
       <div className="input_area">
-        <input placeholder="TODOを入力" />
+        <input
+          placeholder="TODOを入力"
+          value={todoText}
+          onChenge={onChengeTodoText}
+        />
         <button>追加</button>
       </div>
       <div className="incomplete-area">
