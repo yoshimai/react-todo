@@ -6,7 +6,7 @@ export const App = () => {
   const [incompleteTodos, setIncompleteTodos] = useState(["abc", "def"]);
   const [completeTodos, setCompleteTodo] = useState(["ghi"]);
 
-  const onChengeTodoText = (event) => setTodoText(event.target.value);
+  const onChangeTodoText = (event) => setTodoText(event.target.value);
 
   return (
     <>
@@ -14,7 +14,7 @@ export const App = () => {
         <input
           placeholder="TODOを入力"
           value={todoText}
-          onChenge={onChengeTodoText}
+          onChange={onChangeTodoText}
         />
         <button>追加</button>
       </div>
